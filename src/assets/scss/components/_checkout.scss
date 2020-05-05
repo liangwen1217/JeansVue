@@ -1,0 +1,36 @@
+.checkout-title {
+    @media (max-width: 576px) {
+      font-size: 24px;
+    }
+  }
+  .checkout-label {
+    @media (max-width: 576px) {
+      font-size: 20px;
+    }
+  }
+  
+  .paysuccess-box {
+    background-color: rgba(28,119,195,1);
+  }
+  .paysuccess-title {
+    font-weight: bolder;
+    letter-spacing: 10px;
+    @media (max-width: 576px) {
+      letter-spacing: 8px;
+    }
+  }
+  
+  .paysuccess-table {
+    @media (min-width: 768px) {
+      width: 650px;
+      margin: 0 auto;
+    }
+  }
+  
+  .paysuccess-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    url($images+'/paysuccess-bg.jpg');
+    height: 496px;
+    background-size: cover;
+    background-position: center center;
+  }

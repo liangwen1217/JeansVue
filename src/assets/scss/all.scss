@@ -1,0 +1,20 @@
+@import "~bootstrap/scss/functions";
+@import "./heplers/_variables";
+@import "~bootstrap/scss/bootstrap";
+
+@import "./dashboard";
+
+@import "./components/utilities";
+
+// 各元件 ＆頁面
+@import "./components/fontHeader";
+@import "./components/fontFooter";
+@import "./components/section";
+@import "./components/product";
+@import "./components/item-card";
+@import "./components/pay-steps";
+@import "./components/checkout";
+@import "./components/coupon-modal";
+@import "./components/singleproducts";
+
+

@@ -1,0 +1,12 @@
+.bg-activity{
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)),
+    url($images+'/anniversary.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 250px;
+  }
+  
+  .activity-text-box {
+    border-radius: 10px;
+  }
+

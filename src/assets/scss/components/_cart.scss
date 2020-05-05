@@ -1,0 +1,81 @@
+.cart-item-title {
+    font-size: 24px;
+    @media (max-width: 576px) {
+      font-size: 20px;
+    }
+  }
+  .cart-item-title-box {
+    width: 200px;
+  }
+  .cart-item-single-price {
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
+  }
+  .cart-item-qty-price {
+    font-size: 24px;
+    @media (max-width: 576px) {
+      font-size: 20px;
+    }
+  }
+  .mobile-left {
+    @media (max-width: 576px) {
+      width: 75%;
+    }
+  }
+  .mobile-right {
+    @media (min-width: 576px) {
+      height: 150px;
+    }
+  }
+  .qty-group {
+    height: 30px;
+    @media (max-width: 576px) {
+      width: 120px;
+    }
+  }
+  .form-control {
+    border-radius: 0;
+  }
+  .qty-input {
+    text-align: center;
+    width: 45px;
+  }
+  .remove-btn {
+    padding: 0;
+    @media (max-width: 576px) {
+      margin-bottom: 30px;
+    }
+  }
+  .input-group-append > .btn, .input-group-prepend > .btn {
+    border-radius: 0;
+    padding: 0 0.5rem;
+  }
+  .process-steps {
+    // 細細的橫線
+    &::after {
+      background-color: white;
+    }
+  
+    // 三個空圈圈
+    .process-circle {
+      border: 2px solid white;
+    }
+  
+    // 當前頁面 (實心圈圈)
+    .active {
+      border-color: white; // 改顏色 讓當前頁面多一圈 border
+  
+      &::after {
+        content: " ";
+        background-color: #40BCD8;
+      }
+    }
+  
+    // 已完成頁面 (塗滿白底加上綠色勾勾)
+    .completed {
+      font-size: 0.5rem;
+      background-color: white;
+      color: #f8f9fa;
+    }
+  }
