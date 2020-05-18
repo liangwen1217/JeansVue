@@ -24,12 +24,54 @@ export default new VueRouter({
             component: () => import('../views/front/Front.vue'),
             children: [
                 {
+                    path: '',
+                    name: 'Home',
+                    component: () => import('../views/front/Home.vue'),
+                },
+                {
                     path: 'signin',
                     name: 'Login',
                     component: () => import('../views/front/Login.vue'),
                 },
+                {
+                    path: 'products',
+                    name: 'Products',
+                    component: () => import('../views/front/Products.vue'),
+                },
+                {
+                    path: 'products/:productId',
+                    name: 'SingleProduct',
+                    component: () => import('../views/front/SingleProduct.vue'),
+                },
             ],
         },
+        {
+            path: '/cart',
+            component: () => import('../views/front/Checkout.vue'),
+            children: [
+                {
+                    path: '',
+                    name: 'Cart',
+                    component: () => import('../views/front/Cart.vue'),
+                },
+                {
+                    path: 'customerinfo',
+                    name: 'CustomerInfo',
+                    component: () => import('../views/front/CustomerInfo.vue'),
+                },
+                {
+                    path: 'payment/:orderId',
+                    name: 'Payment',
+                    component: () => import('../views/front/Payment.vue'),
+                  },
+                  {
+                    path: 'paysuccess/:orderId',
+                    name: 'PaySuccess',
+                    component: () => import('../views/front/PaySuccess.vue'),
+                  },
+            ],
+        },
+
         {
             path:'*',
             redirect:'login',
@@ -64,22 +106,22 @@ export default new VueRouter({
                 },
             ]
         },
-        {
-            name:'Dashboard',//元件呈現的名稱
-            path:'/',//對應的虛擬路徑
-            component: Dashboard, //對應的元件
-            children: [
-                {
-                    path:'customer_order',//對應的虛擬路徑
-                    name:'CustomerOrder',
-                    component: CustomerOrder, //對應的元件
-                },
-                {
-                    path:'customer_checkout/:orderId',//對應的虛擬路徑
-                    name:'CustomerCheckout',
-                    component: CustomerCheckout, //對應的元件
-                },
-            ]
-        },
+        // {
+        //     name:'Dashboard',//元件呈現的名稱
+        //     path:'/',//對應的虛擬路徑
+        //     component: Dashboard, //對應的元件
+        //     children: [
+        //         {
+        //             path:'customer_order',//對應的虛擬路徑
+        //             name:'CustomerOrder',
+        //             component: CustomerOrder, //對應的元件
+        //         },
+        //         {
+        //             path:'customer_checkout/:orderId',//對應的虛擬路徑
+        //             name:'CustomerCheckout',
+        //             component: CustomerCheckout, //對應的元件
+        //         },
+        //     ]
+        // },
     ],
 });

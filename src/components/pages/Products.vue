@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="padding-top: 70px;">
       <loading :active.sync="isLoading"></loading>
       <div class="text-right mt-4">
         <button class="btn btn-primary" 

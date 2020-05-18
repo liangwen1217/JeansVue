@@ -57,7 +57,7 @@
     padding: 10px 5px;
     transition: all 0.25s;
     &:hover, &.active {
-      background-color: $accent;
+      background-color: $primary-light;
       color: $deepdark;
     }
   }
@@ -72,5 +72,5 @@
   }
   
   .feature-text, .notice-text {
-    color: rgba(255,255,255,0.8);
+    color: #021745;
   }

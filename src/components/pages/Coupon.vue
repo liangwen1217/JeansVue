@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div style="padding-top: 70px;">
         <div class="vld-parent">
             <loading :active.sync="isLoading" loader="dots"></loading>
         </div>
         <div class="text-right">
-            <button class="btn btn-primary" id="addModal" @click.prevent="openCouponModal(true)">建立新的優惠券</button>
+            <button class="btn btn-primary" id="addModal" @click.prevent="openCouponModal(true)" style="margin-top:1rem">建立新優惠券</button>
         </div>
         <table class="table text-left mt-3">
             <thead>
@@ -211,7 +211,7 @@ export default {
             let httpMethod = "delete";
             vm.isLoading = true;
             this.$http[httpMethod](api).then(response => {
-                $("#delcouponModal").modal("hide");
+                $("#delCouponModal").modal("hide");
                 vm.isLoading = false;
                 this.getCoupons();
                 vm.tempProduct = {};

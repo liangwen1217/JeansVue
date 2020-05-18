@@ -78,6 +78,11 @@
                                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                             </a>
                                         </td>
+                                        <td class="align-middle">{{ item.product.title }}</td>
+                                        <td class="align-middle">x{{ item.qty }}</td>
+                                        <td class="align-middle text-center">
+                                        {{ item.total | currency }}
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -122,13 +127,13 @@ export default {
         disCollected(itemId) {
             this.$store.commit('DISCOLLECTED', itemId);
         },
-        addtoCart(id,qry =1 ) {
+        addtoCart(id,qty =1 ) {
             const target = this.cart.carts.filter(items => items.product_id === id);
             if(target.length > 0){
                 const samCartItem = target[0];
                 const originQty = samCartItem.qty;
                 const originCartId = samCartItem.id;
-                const orginProductId = sameCartItem.product.id;
+                const originProductId = sameCartItem.product.id;
                 const newQty = originQty + qty;
                 this.$store.dispatch('updateProductQty', { originCartId, originProductId, newQty });
                 this.openAddModal();

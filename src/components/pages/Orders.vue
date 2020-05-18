@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="padding-top: 70px;">
     <Loading :active.sync="isLoading"></Loading>
     <table class="table mt-4">
       <thead>
@@ -34,7 +34,7 @@
       </tbody>
     </table>
 
-    <Pagination :pages="pagination" @emitPages="getOrders"></Pagination>
+    <Pagination :pagination="pagination" @pageTrigger="getOrders"></Pagination>
   </div>
 </template>
 

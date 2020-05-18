@@ -24,12 +24,12 @@
                     <li class="nav-item">
                         <router-link class="nav-link" to="/admin/coupon">
                         <i class="fas fa-ticket-alt"></i>
-                        優惠券
+                        優惠券列表
                         </router-link>
                     </li>
 
                 </ul>
-                 <h6 class="sidebar-heading d-flex align-items-center px-3 mt-4 mb-1 text-muted">
+                 <!-- <h6 class="sidebar-heading d-flex align-items-center px-3 mt-4 mb-1 text-muted">
                     <span>模擬功能</span>
                 </h6>
                 <ul class="nav flex-column mb-2 text-left">
@@ -38,7 +38,7 @@
                         <i class="fas fa-shopping-cart mr-1"></i>模擬訂單
                     </router-link>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </nav>
     </div>

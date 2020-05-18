@@ -70,7 +70,7 @@ export default {
             $('#delProductModal').modal('show');
         },
         removeCart() {
-            this.$store.dispath('removeCart', this.tempProduct.id);
+            this.$store.dispatch('removeCart', this.tempProduct.id);
             $('#delProductModal').modal('hide');
         },
         getCart() {

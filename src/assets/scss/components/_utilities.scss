@@ -24,7 +24,7 @@ body {
 }
 
 .text-bg {
-  background-color: rgba(28,119,195,1);
+  background-color: hsla(0,0%,100%,.6);
 }
 .bg-md-accent {
     background-color: $light;
@@ -73,7 +73,7 @@ body {
     border: 0;
     border-radius: 50%;
     opacity: 0.9;
-    background: #40BCD8;
+    background: #021745;
     cursor: pointer;
     position: fixed;
     right: 1rem;

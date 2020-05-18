@@ -15,31 +15,32 @@ import {
   localize,
 } from 'vee-validate';
 // // 將驗證條件引入
-// import * as rules from 'vee-validate/dist/rules';
+import * as rules from 'vee-validate/dist/rules';
+import tw from 'vee-validate/dist/locale/zh_TW.json';
 import 'bootstrap';
 import './bus';
-import currencyFilter from './filters/currency';
-import VeeValidate from 'vee-validate';
-import zhTW from 'vee-validate/dist/locale/zh_TW';
-import VueI18n from 'vue-i18n';
+import currencyFilter from './filters/currencyFilter';
+// import VeeValidate from 'vee-validate';
+// import zhTW from 'vee-validate/dist/locale/zh_TW';
+// import VueI18n from 'vue-i18n';
 import store from './store';
 import dateFilter from './filters/date';
 
 Vue.config.productionTip = false;
 Vue.use(VueAxios, axios);
-Vue.use(VueI18n);
+// Vue.use(VueI18n);
 Vue.use(Vuex);
 
-const i18n = new VueI18n({
-  locale: 'zhTW'
-})
-Vue.use(VeeValidate, {
-  events: 'input|blur', //這是為了讓使用者離開該欄位時觸發驗證
-  i18n,
-  dictionary: {
-    zhTW
-  }
-})
+// const i18n = new VueI18n({
+//   locale: 'zhTW'
+// })
+// Vue.use(VeeValidate, {
+//   events: 'input|blur', //這是為了讓使用者離開該欄位時觸發驗證
+//   i18n,
+//   dictionary: {
+//     zhTW
+//   }
+// })
 
 axios.defaults.withCredentials = true;
 
@@ -47,30 +48,30 @@ Vue.component('Loading', Loading);
 // 註冊 vee-validate 全域元件
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);
+localize('zh_TW', tw);
 
 Vue.filter('currency', currencyFilter); // 全域啟用 Filter
 Vue.filter('date', dateFilter);
 
-// Object.keys(rules).forEach((rule) => {
-//   extend(rule, {
-//     ...rules[rule], // copies rule configuration
-//     message: tw[rule], // assign message
-//   });
-// });
+Object.keys(rules).forEach((rule) => {
+  extend(rule, {
+    ...rules[rule], // copies rule configuration
+    message: tw[rule], // assign message
+  });
+});
 
 axios.defaults.withCredentials = true;
 
 
 /* eslint-disable no-new */
 new Vue({
-  i18n,
-  // el: '#app',
-  // components: { App },
-  // template: '<App/>',
+  // i18n,
+  el: '#app',
+  components: { App },
+  template: '<App/>',
   router,
   store,
-  render: h => h(App),
-}).$mount('#app');
+});
 router.beforeEach((to, from, next) => {
   // ...
   console.log('to', to, 'from', from, 'next', next);
@@ -84,7 +85,7 @@ router.beforeEach((to, from, next) => {
           next();  // 登入成功：前往指定路徑
         } else{
           next({
-            path: '/login', // 登入失敗：導向登入頁
+            path: '/signin', // 登入失敗：導向登入頁
           });
         }
     });

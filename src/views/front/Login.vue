@@ -33,6 +33,7 @@
                         <input
                         type="email"
                         class="form-control custom-form-input p-5"
+                        style="padding: 2rem !important;"
                         :class="{ 'is-invalid': failed }"
                         v-model="user.username"
                         placeholder="電子郵件"
@@ -64,6 +65,7 @@
                             <input
                             type="password"
                             class="form-control custom-form-input p-5"
+                            style="padding: 2rem !important;"
                             :class="{ 'is-invalid': failed }"
                             v-model="user.password"
                             placeholder="請輸入密碼"
@@ -109,13 +111,13 @@ export default {
             const vm = this;
             vm.$store.commit('LOADING', true);
             vm.$http.post(api, vm.user).then((response) => {
-                vm.$store.commit('LOADING', flase);
-                if(response.data.success) {
-                    vm.$router.push('admin/products');
+                vm.$store.commit('LOADING', false);
+                if (response.data.success) {
+                vm.$router.push('/admin/products');
                 } else {
-                    const {message} = response.data;
-                    const status = 'danger';
-                    vm.$store.dispatch('updateMessage', {message, status});
+                const { message } = response.data;
+                const status = 'danger';
+                vm.$store.dispatch('updateMessage', { message, status });
                 }
             });
         },
