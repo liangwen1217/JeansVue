@@ -4,10 +4,10 @@
 
 ![牛仔牛仔首頁]https://i.imgur.com/m4kD7th.jpg
 
-＃DEMO
+## DEMO
 <https://liangwen1217.github.io/JeansVue/>
 
-#簡介
+## 簡介
 
 此作品為 Vue.js 前端練習，功能包含：
 
