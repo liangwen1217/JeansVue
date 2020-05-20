@@ -5,7 +5,7 @@
 ![牛仔牛仔首頁]https://i.imgur.com/m4kD7th.jpg
 
 ## DEMO
-<https://liangwen1217.github.io/JeansVue/>
+<https://liangwen1217.github.io/JeansVue/dist>
 
 ## 簡介
 
@@ -94,4 +94,4 @@
 
 ### 其餘更多細節部分，歡迎至 Demo 網站觀看
 
-<https://liangwen1217.github.io/JeansVue/>
+<https://liangwen1217.github.io/JeansVue/dist>
